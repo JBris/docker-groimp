@@ -5,6 +5,7 @@ FROM debian:${DEBIAN_TAG}
 RUN apt-get update \ 
     && apt-get install -y --no-install-recommends bash curl coreutils ca-certificates libxi6 \
     libxrender-dev libxtst-dev \
+    libfreetype.so.6 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
